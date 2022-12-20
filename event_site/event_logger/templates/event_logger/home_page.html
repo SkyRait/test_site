@@ -1,0 +1,27 @@
+{% extends 'event_logger/layout.html' %}
+
+{% block title %} Start page {% endblock %}
+
+
+{% block content %}
+    <body>
+        <div class="features">
+            <h1>Your memories</h1>
+        </div>
+        <div>
+            {% if event %}
+                {% for el in event %}
+                    <div class="alert alert-warning">
+                        <h3>{{ el.title }}</h3>
+                        <p>{{ el.description }}</p>
+                        <p>{{ el.point }}</p>
+                        <p>{{ el.place }}</p>
+                        <a href="{% url 'event-detail' el.id %}" class="btn btn-warning">Read event</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>You don't have memories yet</p>
+            {% endif %}
+        </div>
+    </body>
+{% endblock %}

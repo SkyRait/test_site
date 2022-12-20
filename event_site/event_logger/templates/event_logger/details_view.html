@@ -1,0 +1,17 @@
+{% extends 'event_logger/layout.html' %}
+
+{% block title %} {{ event_view.title }} {% endblock %}
+
+
+{% block content %}
+    <body>
+        <div class="alert alert-warning">
+            <h1>{{ event_view.title }}</h1>
+            <p>{{ event_view.point }}</p>
+            <p>{{ event_view.place }}</p>
+            <p>{{ event_view.description }}</p>
+            <a href="{% url 'event-update' event_view.id %}" class="btn btn-info">Update event</a>
+            <a href="{% url 'event-delete' event_view.id %}" class="btn btn-danger">Delete event</a>
+        </div>
+    </body>
+{% endblock %}

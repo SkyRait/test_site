@@ -1,0 +1,20 @@
+{% extends 'event_logger/layout.html' %}
+
+{% block title %} Form to delete a event {% endblock %}
+
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <div class="features">
+                        <h1>Do you really want to delete this event?</h1>
+                            <form method="post" class="alert alert-warning">
+                                {% csrf_token %}
+                                <button class="btn btn-danger" type="submit">Delete event</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
