@@ -1,0 +1,36 @@
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+aside {
+    float: left;
+    font-size: 25px;
+    background: #181818;
+    padding: 2.5%;
+    height: 60vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .btn-warning {
+    margin-top: 230px;
+}
+
+.features {
+    color: #fff;
+    text-align: center;
+}
+
+.features h1 {font-size: 50px;}
+
+
+.alert-warning {
+    text-align: left;
+    width: 100%;
+}
+
+.alert-warning h1 {text-align: center;}
